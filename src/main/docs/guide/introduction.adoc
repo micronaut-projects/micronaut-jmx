@@ -1,0 +1,3 @@
+The `micronaut-jmx` module includes support for integrating Micronaut services with JMX.
+
+See https://docs.micronaut.io/latest/guide/index.html#jmx[JMX Support] docs details.
