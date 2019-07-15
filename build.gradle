@@ -39,7 +39,7 @@ ext {
 subprojects { Project subproject ->
 
     version project.projectVersion
-    group "io.micronaut.gcp"
+    group "io.micronaut.configurations"
     ext {
         isConfiguration = subproject.projectDir.parentFile.name == 'configurations'
         isBuildSnapshot = version.toString().endsWith("-SNAPSHOT")
