@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>1 Introduction 1.2.0.BUILD-SNAPSHOT</title>
+    <title>3 Endpoints 1.2.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -56,16 +56,16 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
+                    <div class="toc-item prev-left"><a href="../guide/setup.html">&lt;&lt; <strong>2</strong><span>Setting up JMX</span></a></div>
+                
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/setup.html"><strong>2</strong><span>Setting up JMX</span> >></a></div>
-                
 
 
                 <div class="project">
-                    <h1>1 Introduction</h1>
+                    <h1>3 Endpoints</h1>
 
                     <p><strong>Version:</strong> 1.2.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -74,69 +74,23 @@ function addJsClass() {
 
                 
 
-<h1 id="introduction">1 Introduction</h1>
+<h1 id="endpoints">3 Endpoints</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/introduction.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/endpoints.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
 <div class="paragraph">
-<p>The <code>micronaut-jmx</code> module includes support for integrating Micronaut services with JMX.</p>
+<p>If the management dependency is also on the classpath, management beans will be created for all endpoints by default.</p>
 </div>
-<div class="paragraph">
-<p>A bean will be created for the management bean server based on configuration.</p>
-</div>
-<a id="io.micronaut.configuration.jmx.JmxConfiguration" href="#io.micronaut.configuration.jmx.JmxConfiguration">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/configuration/jmx/JmxConfiguration.html">JmxConfiguration</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.agent-id</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the agent id.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.domain</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the domain to create a new server with.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.add-to-factory</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if the server should be kept in the factory. Default true.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.ignore-agent-not-found</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets to ignore the exception if the agent is not found. Default false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.register-endpoints</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if endpoints should be registered. Default true.</p></td>
-</tr>
-</tbody>
-</table>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/setup.html"><strong>2</strong><span>Setting up JMX</span> >></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/setup.html">&lt;&lt; <strong>2</strong><span>Setting up JMX</span></a></div>
                 
                 <div style="clear:both"></div>
             </div>
