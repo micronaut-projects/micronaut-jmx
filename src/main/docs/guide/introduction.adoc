@@ -1,3 +1,5 @@
 The `micronaut-jmx` module includes support for integrating Micronaut services with JMX.
 
-See https://docs.micronaut.io/latest/guide/index.html#jmx[JMX Support] docs details.
+A bean will be created for the management bean server based on configuration.
+
+include::{includedir}configurationProperties/io.micronaut.configuration.jmx.JmxConfiguration.adoc[]
