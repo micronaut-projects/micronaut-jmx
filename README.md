@@ -1,6 +1,6 @@
 # Micronaut JMX
 
-[![Build Status](https://travis-ci.org/micronaut-projects/micronaut-jmx.svg?branch=master)](https://travis-ci.org/micronaut-projects/micronaut-picocli)
+[![Build Status](https://travis-ci.org/micronaut-projects/micronaut-jmx.svg?branch=master)](https://travis-ci.org/micronaut-projects/micronaut-jmx)
 
 This project includes support for exposing Micronaut management endpoints over JMX in [Micronaut](http://micronaut.io).
 
