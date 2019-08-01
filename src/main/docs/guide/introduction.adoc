@@ -1,4 +1,4 @@
-The `micronaut-jmx` module includes support for integrating Micronaut services with JMX.
+The `micronaut-jmx` module includes support for exposing Micronaut management endpoints over JMX.
 
 A bean will be created for the management bean server based on configuration.
 
