@@ -8,4 +8,6 @@ This project includes support for exposing Micronaut management endpoints over J
 
 ## Documentation
 
+See the [Documentation](https://micronaut-projects.github.io/micronaut-jmx/latest/guide) for the docs.
+
 See the [Snapshot Documentation](https://micronaut-projects.github.io/micronaut-jmx/snapshot/guide) for the current development docs.
