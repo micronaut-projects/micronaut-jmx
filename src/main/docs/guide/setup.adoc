@@ -1,1 +1,1 @@
-dependency:io.micronaut:micronaut-jmx[version="{version}"]
+dependency:io.micronaut.configuration:micronaut-jmx[version="{version}"]
