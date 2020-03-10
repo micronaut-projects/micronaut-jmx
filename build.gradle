@@ -152,5 +152,8 @@ allprojects {
             testOutputDir file('build/classes/groovy/test')
         }
     }
+    if (it.name.contains('example') || it.name.startsWith('benchmark')) {
+        return
+    }
     apply from: rootProject.file('gradle/license.gradle')
 }
