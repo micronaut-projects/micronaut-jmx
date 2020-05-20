@@ -17,7 +17,7 @@ package io.micronaut.configuration.jmx
 
 import io.micronaut.context.ApplicationContext
 import io.micronaut.context.env.Environment
-import io.micronaut.management.endpoint.loggers.LogLevel
+import io.micronaut.logging.LogLevel
 import io.micronaut.management.endpoint.loggers.LoggersEndpoint
 import spock.lang.Specification
 
