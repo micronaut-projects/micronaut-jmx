@@ -1,8 +1,8 @@
 dependencies {
-    compile "io.micronaut:micronaut-inject"
+    implementation "io.micronaut:micronaut-inject"
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
     compileOnly "io.micronaut:micronaut-management"
 
-    testCompile "io.micronaut:micronaut-management"
+    testImplementation "io.micronaut:micronaut-management"
 }
