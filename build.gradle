@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        gradlePluginPortal()
         jcenter()
         maven { url "https://dl.bintray.com/micronaut/core-releases-local" }
         maven { url "https://repo.grails.org/grails/core" }
@@ -13,52 +14,10 @@ subprojects { Project subproject ->
     group "io.micronaut.jmx"
 
     apply plugin: "io.micronaut.build.common"
-
-    micronautBuild {
-        enforcedPlatform = true
-    }
-
-    if (subproject.parent.name == "examples" || subproject.name == "examples") {
-        return
-    }
-
     apply plugin: "io.micronaut.build.dependency-updates"
-    if (!subproject.name.startsWith("test-suite")) {
-        apply plugin: "io.micronaut.build.publishing"
-    }
 
-    dependencies {
-        annotationProcessor "io.micronaut:micronaut-inject-java"
-        annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
-        annotationProcessor "io.micronaut:micronaut-graal"
-
-        api "io.micronaut:micronaut-inject"
-        
-        testAnnotationProcessor "io.micronaut:micronaut-inject-java"
-        testImplementation("org.spockframework:spock-core:${spockVersion}") {
-            exclude module:'groovy-all'
-        }
-        testImplementation "io.micronaut.test:micronaut-test-spock:$micronautTestVersion"        
-    }
-       
+    apply plugin: "io.micronaut.build.publishing"
 }
 
 apply plugin: "io.micronaut.build.docs"
 apply plugin: "io.micronaut.build.dependency-updates"
-
-dependencyUpdates.resolutionStrategy {
-    componentSelection { rules ->
-        rules.all { ComponentSelection selection ->
-            boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview', 'b', 'ea'].any { qualifier ->
-                selection.candidate.version ==~ /(?i).*[.-]$qualifier[.\d-+]*/
-            }
-            if (rejected) {
-                selection.reject('Release candidate')
-            }
-        }
-    }
-}
-
-
-
-
