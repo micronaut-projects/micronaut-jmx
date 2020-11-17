@@ -77,20 +77,41 @@ public abstract class AbstractDynamicMBeanFactory implements DynamicMBeanFactory
                         .filter(m -> m.getMethodName().equals(actionName))
                         .collect(Collectors.toList());
                 if (matchedMethods.size() == 1) {
-                    //noinspection unchecked
-                    Object returnVal = matchedMethods.get(0).invoke(instanceSupplier.get(), params);
-                    if (returnVal != null) {
-                        if (Publishers.isSingle(returnVal.getClass()) || Publishers.isConvertibleToPublisher(returnVal)) {
-                            return Flowable.fromPublisher(Publishers.convertPublisher(returnVal, Publisher.class)).blockingFirst();
+                    return invoke(matchedMethods.get(0), params);
+                } else {
+                    for (ExecutableMethod method: matchedMethods) {
+                        if (argumentsMatch(method, signature)) {
+                            return invoke(method, params);
                         }
                     }
-
-                    return returnVal;
-                } else {
-                    //would be necessary at this point to convert the signature string[] to a class[]
-                    //in order to find the correct method
                     return null;
                 }
+            }
+
+            private boolean argumentsMatch(ExecutableMethod method, String[] signature) {
+                Class[] argumentTypes = method.getArgumentTypes();
+                if (argumentTypes.length == signature.length) {
+                    for (int i = 0; i < argumentTypes.length; i++) {
+                        if (!argumentTypes[i].getName().equals(signature[i])) {
+                            return false;
+                        }
+                    }
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            private Object invoke(ExecutableMethod method, Object[] params) {
+                //noinspection unchecked
+                Object returnVal = method.invoke(instanceSupplier.get(), params);
+                if (returnVal != null) {
+                    if (Publishers.isSingle(returnVal.getClass()) || Publishers.isConvertibleToPublisher(returnVal)) {
+                        return Flowable.fromPublisher(Publishers.convertPublisher(returnVal, Publisher.class)).blockingFirst();
+                    }
+                }
+
+                return returnVal;
             }
 
             @Override
