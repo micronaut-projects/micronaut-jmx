@@ -17,9 +17,12 @@ package io.micronaut.configuration.jmx
 
 import io.micronaut.context.ApplicationContext
 import io.micronaut.context.env.Environment
+import io.micronaut.discovery.ServiceInstance
+import io.micronaut.discovery.event.ServiceReadyEvent
 import io.micronaut.health.HealthStatus
 import io.micronaut.management.endpoint.health.HealthEndpoint
 import io.micronaut.management.health.indicator.HealthResult
+import io.micronaut.runtime.server.event.ServerStartupEvent
 import spock.lang.Specification
 
 import javax.management.MBeanInfo
@@ -36,6 +39,7 @@ class HealthEndpointSpec extends Specification {
                 'endpoints.all.enabled': true,
                 'endpoints.all.sensitive': false
         ], Environment.TEST)
+        ctx.publishEvent(new ServiceReadyEvent(ServiceInstance.of("test", "localhost", 8080)))
 
         when:
         MBeanServer server = ctx.getBean(MBeanServer)
@@ -43,13 +47,16 @@ class HealthEndpointSpec extends Specification {
         MBeanInfo info = server.getMBeanInfo(name)
 
         then:
-        info.operations.length == 1
+        info.operations.length == 2
         info.operations[0].name == "getHealth"
         info.operations[0].returnType == "io.micronaut.management.health.indicator.HealthResult"
         info.operations[0].impact == MBeanOperationInfo.INFO
         info.operations[0].signature.length == 1
         info.operations[0].signature[0].type == 'java.security.Principal'
         info.operations[0].signature[0].name == 'principal'
+        info.operations[1].signature.length == 2
+        info.operations[1].signature[1].type == 'io.micronaut.management.health.indicator.HealthCheckType'
+        info.operations[1].signature[1].name == 'selector'
 
         when:
         Principal principal = new Principal() {
