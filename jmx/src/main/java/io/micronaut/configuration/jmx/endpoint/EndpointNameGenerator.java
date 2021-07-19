@@ -17,9 +17,8 @@ package io.micronaut.configuration.jmx.endpoint;
 
 import io.micronaut.configuration.jmx.context.DefaultNameGenerator;
 import io.micronaut.inject.BeanDefinition;
-
-import javax.inject.Named;
-import javax.inject.Singleton;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
 /**
  * Generates object names for endpoint bean definitions.

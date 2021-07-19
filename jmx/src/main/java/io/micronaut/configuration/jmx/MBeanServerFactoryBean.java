@@ -22,10 +22,10 @@ import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.ShutdownEvent;
 import io.micronaut.context.exceptions.BeanInstantiationException;
 import io.micronaut.core.util.StringUtils;
+import jakarta.inject.Singleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.inject.Singleton;
 import javax.management.MBeanServer;
 import javax.management.MBeanServerFactory;
 import java.lang.management.ManagementFactory;

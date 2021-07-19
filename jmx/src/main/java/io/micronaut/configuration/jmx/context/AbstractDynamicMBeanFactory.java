@@ -19,8 +19,8 @@ import io.micronaut.core.async.publisher.Publishers;
 import io.micronaut.core.type.Argument;
 import io.micronaut.inject.BeanDefinition;
 import io.micronaut.inject.ExecutableMethod;
-import io.reactivex.Flowable;
 import org.reactivestreams.Publisher;
+import reactor.core.publisher.Flux;
 
 import javax.management.*;
 import java.util.Arrays;
@@ -107,7 +107,7 @@ public abstract class AbstractDynamicMBeanFactory implements DynamicMBeanFactory
                 Object returnVal = method.invoke(instanceSupplier.get(), params);
                 if (returnVal != null) {
                     if (Publishers.isSingle(returnVal.getClass()) || Publishers.isConvertibleToPublisher(returnVal)) {
-                        return Flowable.fromPublisher(Publishers.convertPublisher(returnVal, Publisher.class)).blockingFirst();
+                        return Flux.from(Publishers.convertPublisher(returnVal, Publisher.class)).blockFirst();
                     }
                 }
 

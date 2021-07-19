@@ -21,9 +21,9 @@ import io.micronaut.inject.BeanDefinition;
 import io.micronaut.inject.ExecutableMethod;
 import io.micronaut.management.endpoint.annotation.Delete;
 import io.micronaut.management.endpoint.annotation.Write;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
-import javax.inject.Named;
-import javax.inject.Singleton;
 import javax.management.MBeanOperationInfo;
 
 /**
