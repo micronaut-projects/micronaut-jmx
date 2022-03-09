@@ -9,7 +9,7 @@ plugins {
     id 'io.micronaut.build.shared.settings' version '5.2.3'
 }
 
-rootProject.name = 'micronaut-parent'
+rootProject.name = 'jmx-parent'
 
 include 'jmx'
 
