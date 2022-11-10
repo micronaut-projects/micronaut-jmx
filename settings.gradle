@@ -11,6 +11,7 @@ plugins {
 
 rootProject.name = 'jmx-parent'
 
+include 'jmx-bom'
 include 'jmx'
 
 enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'

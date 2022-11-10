@@ -1,0 +1,10 @@
+plugins {
+    id("io.micronaut.build.internal.bom")
+}
+
+// First BOM release, this can be removed after a BOM is out
+micronautBuild {
+    binaryCompatibility {
+        enabled = false
+    }
+}
