@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <title>Micronaut JMX</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
     <link rel="stylesheet" href="../css/custom.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
@@ -101,13 +100,13 @@
         <h1>Micronaut JMX</h1>
         <p></p>
         <p>Integrates JMX Monitoring</p>
-        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-jmx/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.1.0/guide/index.html'>3.1.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.0.0-RC1/guide/index.html'>3.0.0-RC1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0.RC1/guide/index.html'>2.0.0.RC1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0.M1/guide/index.html'>2.0.0.M1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/1.2.0/guide/index.html'>1.2.0</option></select> </p>
+        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-jmx/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.2.0/guide/index.html'>3.2.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.1.0/guide/index.html'>3.1.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/3.0.0-RC1/guide/index.html'>3.0.0-RC1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0.RC1/guide/index.html'>2.0.0.RC1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/2.0.0.M1/guide/index.html'>2.0.0.M1</option><option value='https://micronaut-projects.github.io/micronaut-jmx/1.2.0/guide/index.html'>1.2.0</option></select> </p>
     </div>
     
 <h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/introduction.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/3.2.x/src/main/docs/guide/introduction.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -138,34 +137,27 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.agent-id</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If specified, it is expected the
- will return a server. An error will be thrown otherwise.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the agent id.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.domain</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used if  returns null and
-  throws
- an exception.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the domain to create a new server with.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.add-to-factory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only used if  returns null and
-  throws
- an exception.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if the server should be kept in the factory. Default true.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.ignore-agent-not-found</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If a server could not be found with the ,
- an exception will be thrown unless this method returns
- true.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets to ignore the exception if the agent is not found. Default false.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.register-endpoints</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If management beans should be registered for endpoints.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if endpoints should be registered. Default true.</p></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +165,7 @@
 <h1 id="releaseHistory"><a class="anchor" href="#releaseHistory"></a>2 Release History</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/releaseHistory.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/3.2.x/src/main/docs/guide/releaseHistory.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -189,7 +181,7 @@
 <h1 id="setup"><a class="anchor" href="#setup"></a>3 Setting up JMX</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/setup.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/3.2.x/src/main/docs/guide/setup.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -199,7 +191,7 @@
 <p>        <div class="listingblock multi-language-sample">
 <div class="title"></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.jmx:micronaut-jmx:4.0.0-SNAPSHOT")</span></code></pre>
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.jmx:micronaut-jmx:3.2.0-SNAPSHOT")</span></code></pre>
 </div>
 </div>
 <div class="listingblock multi-language-sample">
@@ -207,7 +199,7 @@
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.micronaut.jmx&lt;/groupId&gt;
     &lt;artifactId&gt;micronaut-jmx&lt;/artifactId&gt;
-    &lt;version&gt;4.0.0-SNAPSHOT&lt;/version&gt;
+    &lt;version&gt;3.2.0-SNAPSHOT&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div></p>
@@ -216,7 +208,7 @@
 <h1 id="endpoints"><a class="anchor" href="#endpoints"></a>4 Endpoints</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/endpoints.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/3.2.x/src/main/docs/guide/endpoints.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -229,7 +221,7 @@
 <h1 id="repository"><a class="anchor" href="#repository"></a>5 Repository</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/master/src/main/docs/guide/repository.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-jmx/edit/3.2.x/src/main/docs/guide/repository.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
