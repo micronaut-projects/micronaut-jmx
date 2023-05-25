@@ -6,7 +6,7 @@ pluginManagement {
 }
 
 plugins {
-    id 'io.micronaut.build.shared.settings' version '6.4.2'
+    id("io.micronaut.build.shared.settings") version "6.5.0"
 }
 
 rootProject.name = 'jmx-parent'
@@ -17,7 +17,6 @@ include 'jmx'
 enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'
 
 micronautBuild {
-    addSnapshotRepository()
     useStandardizedProjectNames = true
     importMicronautCatalog()
 }
