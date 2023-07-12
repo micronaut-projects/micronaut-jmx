@@ -46,11 +46,11 @@
         <div class="docs-content">
             <div class="project">
                 <h1>Configuration Reference</h1>
-                <p><strong>Version:</strong>3.2.0</p>
+                <p><strong>Version:</strong>4.0.0</p>
                 <p></p>
             </div>
 <div class="sect2">
-<h3 id="_jmx_config_properties">Jmx Config Properties</h3>
+<h3 id="_micronaut_jmx_config_properties">Micronaut Jmx Config Properties</h3>
 <a id="io.micronaut.configuration.jmx.JmxConfiguration" href="#io.micronaut.configuration.jmx.JmxConfiguration">&#128279;</a>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/configuration/jmx/JmxConfiguration.html">JmxConfiguration</a></caption>
@@ -70,27 +70,34 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.agent-id</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the agent id.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If specified, it is expected the
+ will return a server. An error will be thrown otherwise.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.domain</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the domain to create a new server with.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used if  returns null and
+  throws
+ an exception.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.add-to-factory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if the server should be kept in the factory. Default true.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only used if  returns null and
+  throws
+ an exception.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.ignore-agent-not-found</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets to ignore the exception if the agent is not found. Default false.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If a server could not be found with the ,
+ an exception will be thrown unless this method returns
+ true.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.register-endpoints</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets if endpoints should be registered. Default true.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If management beans should be registered for endpoints.</p></td>
 </tr>
 </tbody>
 </table>
