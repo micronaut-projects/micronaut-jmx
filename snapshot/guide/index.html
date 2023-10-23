@@ -138,27 +138,27 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.agent-id</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If specified, it is expected the {@link javax.management.MBeanServerFactory#findMBeanServer}
+<td class="tableblock halign-left valign-top"><p class="tableblock">If specified, it is expected the
  will return a server. An error will be thrown otherwise.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.domain</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used if {@link #getAgentId()} returns null and
- {@link java.lang.management.ManagementFactory#getPlatformMBeanServer()} throws
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used if  returns null and
+  throws
  an exception.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.add-to-factory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only used if {@link #getAgentId()} returns null and
- {@link java.lang.management.ManagementFactory#getPlatformMBeanServer()} throws
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only used if  returns null and
+  throws
  an exception.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jmx.ignore-agent-not-found</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If a server could not be found with the {@link #agentId},
+<td class="tableblock halign-left valign-top"><p class="tableblock">If a server could not be found with the ,
  an exception will be thrown unless this method returns
  true.</p></td>
 </tr>
