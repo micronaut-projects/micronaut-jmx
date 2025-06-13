@@ -4,7 +4,7 @@ micronaut = "4.9.1"
 micronaut-test = "4.7.0"
 groovy = "4.0.18"
 spock = "2.3-groovy-4.0"
-micronaut-logging = "1.4.0"
+micronaut-logging = "1.7.0"
 sonatype-scan = "3.0.0"
 
 [libraries]
