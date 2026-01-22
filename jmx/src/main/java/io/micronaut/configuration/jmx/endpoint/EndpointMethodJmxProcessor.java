@@ -74,7 +74,7 @@ public class EndpointMethodJmxProcessor implements ExecutableMethodProcessor<End
     }
 
     @Override
-    public void process(BeanDefinition<?> beanDefinition, ExecutableMethod<?, ?> method) {
+    public <B> void process(BeanDefinition<B> beanDefinition, ExecutableMethod<B, ?> method) {
         mBeanDefinitions.compute(beanDefinition, (key, value) -> {
             if (value == null) {
                 try {
