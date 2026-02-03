@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.micronaut.configuration.jmx"},{"l":"io.micronaut.configuration.jmx.context"},{"l":"io.micronaut.configuration.jmx.endpoint"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.micronaut.configuration.jmx"},{"l":"io.micronaut.configuration.jmx.context"},{"l":"io.micronaut.configuration.jmx.endpoint"},{"l":"io.micronaut.jmx.info"}];updateSearchResults();
