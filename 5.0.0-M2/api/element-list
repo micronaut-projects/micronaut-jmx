@@ -1,0 +1,4 @@
+io.micronaut.configuration.jmx
+io.micronaut.configuration.jmx.context
+io.micronaut.configuration.jmx.endpoint
+io.micronaut.jmx.info
