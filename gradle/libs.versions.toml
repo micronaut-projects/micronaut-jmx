@@ -1,5 +1,5 @@
 [versions]
-micronaut = "5.2.20"
+micronaut = "5.2.21"
 
 [libraries]
 # Core
